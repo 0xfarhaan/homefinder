@@ -17,3 +17,9 @@ that is shaded to show the living area based on the commute time specified by th
 As a user
 I can input two postcodes and get the travel time between locations
 ``` 
+
+##How to run
+Navigate to directory and run the following command in the terminal
+```bash
+python ./app/home_finder.py
+```
