@@ -23,3 +23,4 @@ Navigate to directory and run the following command in the terminal
 ```bash
 python ./app/home_finder.py
 ```
+Please note you will need to add your own googlemaps API key as an environment variable to run currently.
