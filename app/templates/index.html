@@ -5,6 +5,14 @@
     <title>Home Finder</title>
 </head>
 <body>
-Hello World 2
+<h1>Home Finder</h1>
+
+<form action="{{ url_for('traveltime') }}" method="post">
+  <label for="start"> start:</label>
+  <input type="text" id="start" name="start"><br><br>
+  <label for="end"> end:</label>
+  <input type="text" id="end" name="end"><br><br>
+  <input type="submit" value="Submit">
+</form>
 </body>
 </html>
