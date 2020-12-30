@@ -24,3 +24,11 @@ def get_time_to_destination(start, end):
     travel_time = directions_result[0]["legs"][0]["duration"]["text"]
 
     return travel_time
+
+
+def get_format_time_to_mins(time_as_string):
+    pass
+
+
+def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
+    pass
