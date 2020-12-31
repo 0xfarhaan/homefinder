@@ -13,6 +13,11 @@ with open(csv_filename, newline='') as inputfile:
     for row in csv.reader(inputfile):
         postcodes.append(row[0])
 
+
+def format_time_to_mins(time):
+    return int(round(time/60))
+
+
 def get_time_to_destination(start, end):
     """returns the transit time between two destinations using google maps api"""
     now = datetime.now()
@@ -21,14 +26,10 @@ def get_time_to_destination(start, end):
                                          mode="transit",
                                          departure_time=now)
 
-    travel_time = directions_result[0]["legs"][0]["duration"]["text"]
+    travel_time = directions_result[0]["legs"][0]["duration"]['value']
+    travel_time_minutes = format_time_to_mins(travel_time)
 
-    return travel_time
-
-
-def get_format_time_to_mins(time_as_string):
-    pass
-
+    return travel_time_minutes
 
 def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
     pass

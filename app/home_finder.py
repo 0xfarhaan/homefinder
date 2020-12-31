@@ -10,7 +10,7 @@ def index():
 @app.route('/api/traveltime', methods=["POST"])
 def traveltime():
     time = get_time_to_destination(request.form["start"], request.form["end"])
-    return time
+    return str(time)
 
 if __name__ == "__main__":
     app.run(debug=True)
