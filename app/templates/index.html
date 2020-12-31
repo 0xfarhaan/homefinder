@@ -7,11 +7,11 @@
 <body>
 <h1>Home Finder</h1>
 
-<form action="{{ url_for('traveltime') }}" method="post">
-  <label for="start"> start:</label>
-  <input type="text" id="start" name="start"><br><br>
-  <label for="end"> end:</label>
-  <input type="text" id="end" name="end"><br><br>
+<form action="{{ url_for('postcodes') }}" method="post">
+  <label for="office_postcode"> Office Postcode:</label>
+  <input type="text" id="office_postcode" name="office_postcode"><br><br>
+  <label for="commute_time"> Desired Commute Time in Mins:</label>
+  <input type="text" id="commute_time" name="commute_time"><br><br>
   <input type="submit" value="Submit">
 </form>
 </body>
