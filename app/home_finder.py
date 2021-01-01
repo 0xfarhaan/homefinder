@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/api/postcodes', methods=["POST"])
+@app.route('/postcodes/', methods=["POST"])
 def postcodes():
     postcodes = ["IG12SZ", "N87EB"]  # Note this is a placeholder postcodes to check against
     postcodes_list = get_suitable_postcodes(postcodes, request.form["office_postcode"], int(request.form["commute_time"]))
