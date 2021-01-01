@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for
-from maps_logic import get_suitable_postcodes
+from app.maps_logic import get_suitable_postcodes
 import json
 
 app = Flask(__name__)
