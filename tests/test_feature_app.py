@@ -9,7 +9,6 @@ def client():
 
 def test_index(client):
     rv = client.get('/')
-    print(rv.data)
     assert b"Home Finder" in rv.data
     assert rv.status_code == 200
 
