@@ -11,6 +11,7 @@ def test_index(client):
     rv = client.get('/')
     print(rv.data)
     assert b"Home Finder" in rv.data
+    assert rv.status_code == 200
 
 def test_postcode(client):
     data = {"office_postcode": "W1A1ER", "commute_time": "60"}
