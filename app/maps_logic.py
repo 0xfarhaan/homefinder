@@ -7,6 +7,7 @@ gmaps = googlemaps.Client(key=API_KEY)
 
 
 def format_time_to_mins(time):
+    """formats time from seconds to the nearest minute"""
     return int(round(time/60))
 
 
