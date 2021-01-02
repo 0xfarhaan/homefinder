@@ -20,10 +20,7 @@ def get_time_to_destination(start, end):
                                          mode="transit",
                                          departure_time=now)
 
-    travel_time = directions_result[0]["legs"][0]["duration"]['value']
-    travel_time_minutes = format_time_to_mins(travel_time)
-
-    return travel_time_minutes
+    return format_time_to_mins(directions_result[0]["legs"][0]["duration"]['value'])
 
 def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
     """checks commute time from office and returns postcodes that are in the desired commute time."""

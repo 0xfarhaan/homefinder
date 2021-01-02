@@ -11,8 +11,7 @@ def index():
 
 @app.route('/postcodes/', methods=["POST"])
 def postcodes():
-    postcodes = load_postcodes()
-    postcodes_list = get_suitable_postcodes(postcodes, request.form["office_postcode"], int(request.form["commute_time"]))
+    postcodes_list = get_suitable_postcodes(load_postcodes(), request.form["office_postcode"], int(request.form["commute_time"]))
     return json.dumps(postcodes_list)
 
 if __name__ == "__main__":
