@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 from app.maps_logic import get_suitable_postcodes
+from app.load_postcodes import load_postcodes
 import json
 
 app = Flask(__name__)
@@ -10,8 +11,7 @@ def index():
 
 @app.route('/postcodes/', methods=["POST"])
 def postcodes():
-    postcodes = ["IG12SZ", "N87EB"]  # Note this is a placeholder postcodes to check against
-    postcodes_list = get_suitable_postcodes(postcodes, request.form["office_postcode"], int(request.form["commute_time"]))
+    postcodes_list = get_suitable_postcodes(load_postcodes(), request.form["office_postcode"], int(request.form["commute_time"]))
     return json.dumps(postcodes_list)
 
 if __name__ == "__main__":
