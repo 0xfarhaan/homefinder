@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 from app.maps_logic import get_suitable_postcodes
 from app.load_postcodes import load_postcodes
 import json
