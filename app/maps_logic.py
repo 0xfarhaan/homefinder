@@ -1,7 +1,6 @@
 import googlemaps
 import os
 from datetime import datetime
-from app.load_postcodes import load_postcodes
 
 API_KEY = os.getenv("API_KEY")
 gmaps = googlemaps.Client(key=API_KEY)
@@ -21,6 +20,7 @@ def get_time_to_destination(start, end):
                                          departure_time=now)
 
     return format_time_to_mins(directions_result[0]["legs"][0]["duration"]['value'])
+
 
 def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
     """checks commute time from office and returns postcodes that are in the desired commute time."""
