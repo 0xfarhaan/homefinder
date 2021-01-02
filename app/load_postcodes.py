@@ -8,6 +8,7 @@ def load_postcodes():
     postcodes = []
     with open(csv_path, newline='') as inputfile:
         for row in csv.reader(inputfile):
-            postcodes.append(row[0] + " London")
+            if "N" in row[0][0]:  # North / North-West London Only
+                postcodes.append(row[0] + " London")
 
     return postcodes

@@ -1,6 +1,7 @@
 import googlemaps
 import os
 from datetime import datetime
+from app.load_postcodes import load_postcodes
 
 API_KEY = os.getenv("API_KEY")
 gmaps = googlemaps.Client(key=API_KEY)
@@ -29,6 +30,6 @@ def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
     suitable_postcodes = []
     for postcode in postcodes_to_check:
         if get_time_to_destination(postcode, office_postcode) <= commute_time:
-            suitable_postcodes.append(postcode)
+            suitable_postcodes.append(postcode.split(" ")[0])
 
     return suitable_postcodes
