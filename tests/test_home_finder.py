@@ -15,6 +15,6 @@ def test_index(client):
 def test_postcode(client):
     data = {"office_postcode": "W1A1ER", "commute_time": "60"}
     rv = client.post('/postcodes/', data=data)
-    assert b"N87EB" in rv.data
+    assert b"N8" in rv.data
     assert rv.status_code == 200
 
