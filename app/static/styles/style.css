@@ -12,11 +12,12 @@ section {
   align-items: center;
   align-content: center;
   display: flex;
+  justify-content: center;
 }
 
 .box {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   padding: 50px;
   background: rgba(255,255,255,.2);
   box-shadow: 0 5px 15px rgba(0,0,0, .5);
