@@ -1,26 +1,58 @@
 # Home Finder
 
-## About
-This is a WIP project which is building a flask application in Python that allows a user to find a suitable address 
-that is within their commute time. The idea is that a user can specify their office location and get back a map of london
-that is shaded to show the living area based on the commute time specified by the user.
+## About:
+Home Finder is a web app that allows a person who is looking to move into North/North-West London
+search for postcode districts that fall within the desired commute time to their office.
 
-## Design ideas
-- Use the google maps api to get travel time 
-- Use ONS postcode data to test multiple postcodes to get those that fit the commute time
-- Let the user specify which area of london to reduce the number of requests to the API as a cost saving measure
+## How to use:
+Please find a deployed version [here](https://tranquil-sea-13127.herokuapp.com/)
 
+Once on the website fill the form with the postcode of your office and desired commute time in minutes.
+You will then be returned postcode districts that fulfil your criteria. 
 
-## MVP 
-### User Story:
-```
-As a user
-I can input two postcodes and get the travel time between locations
-``` 
+## Running locally:
+It is possible to run the app locally, but you will need to have your own googlemaps api key.
 
-## How to run
-Navigate to directory and run the following command in the terminal
+1. Clone this repository and navigate to its directory.
+2. Setup your virtual environment, activate it then install the requirements as described below
 ```bash
-python ./app/home_finder.py
+$ python -m  venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
 ```
-Please note you will need to add your own googlemaps API key as an environment variable to run currently.
+3. Set your googlemaps api key using the enviroment variable API_KEY.
+```bash
+$ export API_KEY="insert api key here"
+```
+4. Set your flask app variable.
+```bash
+$ export FLASK_APP=app.home_finder.py
+```
+5. Run app using the following command.
+```bash
+$ flask run
+```
+
+## Running Tests:
+First you must follow the running locally instructions. Then whilst in the root of the project
+run the following command.
+```bash
+$ pytest -rA .
+```
+
+## Technologies:
+
+| Area                 | Technology                 |
+| -------------------- | -------------------------- |
+| Language           | Python, HTML, CSS|
+| Frameworks         | Flask, Bootstrap|
+| Testing            | Pytest|
+|Other              | Google Maps
+
+## Future Developments:
+For more information refer to the github project board.
+
+- Add the ability to check multiple office locations.
+- Add map highlighting on postcode districts as response.
+
+
