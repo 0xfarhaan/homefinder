@@ -1,7 +1,7 @@
 # Home Finder
 
 ## About:
-Home Finder is a web app that allows a person who is looking to move into North/North-West London
+Home Finder is a web app that allows a person who is looking to move into North/North-West London to
 search for postcode districts that fall within the desired commute time to their office.
 
 ## How to use:
