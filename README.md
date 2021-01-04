@@ -24,11 +24,7 @@ $ pip install -r requirements.txt
 ```bash
 $ export API_KEY="insert api key here"
 ```
-4. Set your flask app variable.
-```bash
-$ export FLASK_APP=app.home_finder.py
-```
-5. Run app using the following command.
+4. Run app using the following command.
 ```bash
 $ flask run
 ```
