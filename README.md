@@ -14,13 +14,13 @@ You will then be returned postcode districts that fulfil your criteria.
 It is possible to run the app locally, but you will need to have your own googlemaps api key.
 
 1. Clone this repository and navigate to its directory.
-2. Setup your virtual environment, activate it then install the requirements as described below
+2. Set up your virtual environment, activate it then install the requirements as described below
 ```bash
 $ python -m  venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
-3. Set your googlemaps api key using the enviroment variable API_KEY.
+3. Set your googlemaps api key using the environment variable API_KEY.
 ```bash
 $ export API_KEY="insert api key here"
 ```
