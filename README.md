@@ -40,7 +40,7 @@ $ pytest -rA .
 
 | Area                 | Technology                 |
 | -------------------- | -------------------------- |
-| Language           | Python, HTML, CSS|
+| Languages           | Python, HTML, CSS|
 | Frameworks         | Flask, Bootstrap|
 | Testing            | Pytest|
 |Other              | Google Maps
