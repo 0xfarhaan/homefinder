@@ -16,7 +16,3 @@ def postcodes():
     """returns postcode districts that are within the commute time to the office via public transport"""
     postcodes_list = get_suitable_postcodes(load_postcodes(), request.form["office_postcode"], int(request.form["commute_time"]))
     return json.dumps(postcodes_list)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
