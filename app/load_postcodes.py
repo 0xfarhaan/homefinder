@@ -2,7 +2,7 @@ import csv
 import os
 
 
-def load_postcodes():
+def load_postcodes() -> list:
     """Loads all postcode districts for the London area from csv"""
     csv_path = os.path.join(
         os.path.abspath(os.path.dirname(__file__)), "../postcodes.csv"
