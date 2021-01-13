@@ -1,6 +1,7 @@
 import googlemaps
 import os
 from datetime import datetime
+from typing import Dict
 
 API_KEY = os.getenv("API_KEY")
 gmaps = googlemaps.Client(key=API_KEY)
@@ -21,7 +22,7 @@ def get_time_to_destination(start: str, end: str) -> int:
 
 def get_suitable_postcodes(postcodes_to_check: list, office_postcode: str, commute_time: int) -> dict:
     """checks commute time from office and returns postcodes that are in the desired commute time."""
-    suitable_postcodes = {"Postcodes": []}
+    suitable_postcodes = {"Postcodes": []}  # type: Dict[str, list]
     for postcode in postcodes_to_check:
         if get_time_to_destination(postcode, office_postcode) <= commute_time:
             suitable_postcodes["Postcodes"].append(postcode.split(" ")[0])
