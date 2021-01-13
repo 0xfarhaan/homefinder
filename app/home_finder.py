@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
+def index() -> str:
     return render_template("index.html")
 
 
 @app.route("/postcodes/", methods=["POST"])
-def postcodes():
+def postcodes() -> dict:
     """returns postcode districts that are within the commute time to the office via public transport"""
     postcodes_dict = get_suitable_postcodes(
         load_postcodes(),
