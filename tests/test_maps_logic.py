@@ -15,4 +15,4 @@ def test_get_suitable_postcodes():
     mock_postcodes_to_check = ["IG12UT", "N153NX"]
     office_postcode = "NW16JJ"
     commute_time = 60
-    assert get_suitable_postcodes(mock_postcodes_to_check, office_postcode, commute_time) == ["N153NX"]
+    assert get_suitable_postcodes(mock_postcodes_to_check, office_postcode, commute_time) == {"Postcodes": ["N153NX"]}

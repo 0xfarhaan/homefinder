@@ -24,9 +24,9 @@ def get_time_to_destination(start, end):
 
 def get_suitable_postcodes(postcodes_to_check, office_postcode, commute_time):
     """checks commute time from office and returns postcodes that are in the desired commute time."""
-    suitable_postcodes = []
+    suitable_postcodes = {"Postcodes": []}
     for postcode in postcodes_to_check:
         if get_time_to_destination(postcode, office_postcode) <= commute_time:
-            suitable_postcodes.append(postcode.split(" ")[0])
+            suitable_postcodes["Postcodes"].append(postcode.split(" ")[0])
 
     return suitable_postcodes
