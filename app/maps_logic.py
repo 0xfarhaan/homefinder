@@ -4,6 +4,10 @@ from datetime import datetime
 from typing import Dict
 
 API_KEY = os.getenv("API_KEY")
+
+if not API_KEY:
+    raise ValueError("No API_KEY set for Flask application")
+
 gmaps = googlemaps.Client(key=API_KEY)
 
 
